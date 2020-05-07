@@ -42,7 +42,7 @@ module.exports = () => {
         .get((req, res, next) => {
             var db = getDBAdapter(req);
             var name = req.query["name"];
-            const id = nanoid();
+            const id = nanoid.nanoid();
             db.addSurvey(id, name, function (result) {
                 res.status(200).json({
                     Name: result.name,
