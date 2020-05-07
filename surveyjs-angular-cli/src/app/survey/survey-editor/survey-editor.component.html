@@ -1,0 +1,10 @@
+<h1>Survey JS Editor</h1>
+<div class="survey-page-header">
+  <div class="sv_main survey-page-header-content">
+    <button>Back</button>
+  </div>
+</div>
+
+<div>
+  <survey-editor [json]="json" (surveySaved)="onSurveySaved($event)"></survey-editor>
+</div>

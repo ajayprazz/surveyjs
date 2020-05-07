@@ -1,0 +1,12 @@
+<div class="container">
+  <p>List of available surveys. Surveys you have taken are not listed below.</p>
+  <!-- <ul>
+    <li *ngFor="let survey of surveys"><a routerLink="/survey/survey/{{survey.id}}">{{survey.name}}</a></li>
+  </ul> -->
+  <table>
+    <tr *ngFor="let survey of surveys">
+      <td>{{survey.name}}</td>
+      <td><button class="btn btn-primary" routerLink="/survey/survey/{{survey.id}}">Start</button></td>
+    </tr>
+  </table>
+</div>

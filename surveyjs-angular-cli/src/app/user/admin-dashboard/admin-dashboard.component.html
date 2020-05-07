@@ -1,0 +1,31 @@
+<div class="sv_main sv_frame sv_default_css">
+  <div class="sv_custom_header"></div>
+  <div class="sv_container">
+    <div class="sv_header">
+      <h3>Admin Panel</h3>
+      <p>Below you can see the list of available surveys you can edit, run and see the results</p>
+    </div>
+    <div class="sv_body">
+      <div id="surveys-list" class="surveys-list">
+        <section>
+          <button (click)="create()">Add</button>
+
+        </section>
+        <table class="table table-striped">
+          <tbody>
+            <tr *ngFor="let survey of surveys;let i=index">
+              <td>{{i+1}}</td>
+              <td>{{survey.name}}</td>
+              <td>
+                <a class="sv_button_link" routerLink="/survey/survey/{{survey.id}}">Run</a>
+                <a class="sv_button_link" routerLink="/survey/survey-editor/{{survey.id}}">Edit</a>
+                <a class="sv_button_link" routerLink="/survey/result/{{survey.id}}">Results</a>
+                <span class="sv_button_link sv_button_delete" (click)="delete(survey.id,i)">Delete</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

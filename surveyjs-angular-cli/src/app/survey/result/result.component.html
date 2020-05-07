@@ -1,0 +1,25 @@
+<div class="container">
+  <h3>Result of {{surveyName}}</h3>
+  <table class="table">
+    <tr>
+      <th>User Id</th>
+      <th>User Email</th>
+      <th>User Ip</th>
+      <th>Result</th>
+      <th>Obtained Score</th>
+      <th>Total Score</th>
+      <th>Start Time</th>
+      <th>End Time</th>
+    </tr>
+    <tr *ngFor="let result of results">
+      <td>{{result.userId}}</td>
+      <td>{{result.userEmail}}</td>
+      <td>{{result.userIp}}</td>
+      <td>{{result.surveyResult}}</td>
+      <td>{{result.obtainedScore}}</td>
+      <td>{{result.totalScore}}</td>
+      <td>{{result.startTime | date:'medium'}}</td>
+      <td>{{result.endTime | date:'medium'}}</td>
+    </tr>
+  </table>
+</div>
